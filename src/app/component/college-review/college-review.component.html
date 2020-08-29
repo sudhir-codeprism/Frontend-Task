@@ -1,0 +1,32 @@
+<div class='review'>
+    <div class="main-content" *ngFor="let results of res.colleges">
+       <div class="main-content-wrapper">
+
+      <div class='review-star'>
+          <span><b>{{results.rating}}</b>/5</span>
+      <span class='very-good'>Very Good</span> 
+       </div>
+       <div style="align-self: start;margin:10px; margin-top: 65px;">
+       <div class="tags"> {{results.tags[0]}}</div>
+       <div class="tags2"> {{results.tags[1]}}</div>
+       <div style="float: right; color:white;margin-left: 105px;">#{{results.ranking}}</div>
+    </div>
+
+       </div>
+    <div class="container">
+        <div>
+    <h3 style="display: inline;"><b>{{results.college_name}}</b><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+    </h3> 
+    <span class="original"><strike><span>&#8377;</span>{{results.original_fees}}</strike>  <span class="discount-label red"> <span>{{results.discount}}</span> </span>
+</span>
+    </div>
+     <h4 style="display:inline;">{{results.nearest_place[0]}}</h4> | <h5 style="opacity: 0.5; display: inline;">{{results.nearest_place[1]}}</h5><span class="discount-price">{{results.discounted_fees | currency:'INR':'symbol':'3.0'}}</span>
+<h4><span style="color:lightseagreen">93% Match: </span><span style="opacity: 0.7;">{{results.famous_nearest_places}}</span><span style="    margin-left: 29px;
+    font-size: 14px;
+    opacity: 0.7;">{{results.fees_cycle}}</span></h4>
+<div class="offertext"><a href="#">{{results.offertext}}</a></div>    
+
+<div class="amenties">{{results.amenties[0]}} <ul style="display: inline-grid;"><li>{{results.amenties[1]}}</li></ul></div>
+</div>
+
+
